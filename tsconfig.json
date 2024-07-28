@@ -1,0 +1,30 @@
+{
+    "compilerOptions": {
+        "allowJs": false, 
+        "allowSyntheticDefaultImports": true,
+        "declaration": true, 
+        "declarationMap": false, //Prevent creating .d.ts.map files
+        "emitDeclarationOnly": false, //set to false for cypress to work
+        "noEmit": false, //set to false for cypress to work
+        "esModuleInterop": true, //TS will treat CommmonJS/AMD/UMD modules differently than es6 modules
+        "inlineSourceMap": false, //When set to true, instead of writing out a .js.map file to provide source maps, TypeScript will embed the source map content in the .js files
+        "lib": ["esnext"], //Use feature from the latest js version. Can be set to ES2015 or ES6 but latest features might not work
+        "listEmittedFiles": false, //Do not print emitted files to the terminal
+        "listFiles": false, //Do not print name of the files as part of the compilation
+        "moduleResolution": "node", //Should be set to nodenext or node16 as per ts docs but gives error. so set it to just node for now
+        "noFallthroughCasesInSwitch": true, //Must require break, return or throw in the switch statements
+        "pretty": true, //Style errors and messages with different colors
+        "resolveJsonModule": true, //Allow importing modules with a .json extension
+        "skipLibCheck": true, //Skip type checking of default library declaration files
+        "strict": true, //Use strong type checking 
+        "traceResolution": false, //Set to false and ts will print info about its resolution process for each procecssed file
+        "jsx": "react", //controls how jsx react constructs are emitted in js files.
+        "types": ["cypress", "react", "react-dom", "uuid"], //Only these packages will be listed in the global scope. For eg, only @types/react, @types/node, @types/cypress etc.. from node-modules will be included. All other types will not
+        "baseUrl": "./", //Resolve module names from this base directory
+        "paths": { //Paths specifes how ts should resolve an import in our require or import statements
+            "@modjs-youtube/*": ["./packages/*/", "./docs/*/"] 
+        }
+    },
+    "compileOnSave": false, //Set to false because we are using babel
+    "exclude": ["node_modules", "build"],
+}

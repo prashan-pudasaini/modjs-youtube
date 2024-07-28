@@ -1,0 +1,61 @@
+{
+  "name": "@modjs-youtube/monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "packages/core",
+    "packages/icons",
+    "packages/utils",
+    "packages/helpers"
+  ],
+  "scripts": {
+    "build:core": "npm run build --workspace @modjs-youtube/core",
+    "build:icons": "npm run build --workspace @modjs-youtube/icons",
+    "build:utils": "npm run build --workspace @modjs-youtube/utils",
+    "build:helpers": "npm run build --workspace @modjs-youtube/helpers",
+    "test:core": "npm run test:component:ui --workspace @modjs-youtube/core",
+    "test:icons": "npm run test:component:ui --workspace @modjs-youtube/icons",
+    "test:utils": "npm run test:component:ui --workspace @modjs-youtube/utils",
+    "test:helpers": "npm run test:unit:ui --workspace @modjs-youtube/helpers",
+    "prePublish:core": "npm run prePublish --workspace @modjs-youtube/core",
+    "prePublish:icons": "npm run prePublish --workspace @modjs-youtube/icons",
+    "prePublish:utils": "npm run prePublish --workspace @modjs-youtube/utils",
+    "prePublish:helpers": "npm run prePublish --workspace @modjs-youtube/helpers"
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+
+  "devDependencies": {
+    "@babel/cli": "^7.24.5",
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-react": "^7.24.5",
+    "@babel/preset-typescript": "^7.24.5",
+    "babel-plugin-styled-components": "^2.1.4",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "cypress": "^13.9.0",
+    "@cypress/code-coverage": "^3.12.39",
+    "eslint": "^8.57.0",
+    "@eslint/js": "^9.3.0",
+    "typescript-eslint": "^7.10.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "ts-loader": "^9.5.1",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "@testing-library/react": "^16.0.0",
+    "jsdom": "^24.1.0",
+    "vitest": "^1.6.0",
+    "@vitest/ui": "^1.6.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "@types/uuid": "^9.0.8",
+    "npm-run-all": "^4.1.5"
+  }
+}

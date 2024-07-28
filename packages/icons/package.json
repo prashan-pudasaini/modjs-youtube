@@ -1,0 +1,45 @@
+{
+  "name": "@modjs-youtube/icons",
+  "version": "1.0.0",
+  "sideEffects": false,
+  "main": "./build/cjs/index.js",
+  "module": "./build/esm/index.js",
+  "types": "./build/types/src/index.d.ts",
+  "private": false,
+  "description": "",
+  "files": ["build"],
+  "exports": {
+    "require": "./build/cjs/index.js",
+    "import": "./build/esm/index.js",
+     "types": "./build/types/src/index.d.ts"
+  },
+  "scripts": {
+   "clean": "rm -rf ./build",
+   "watch:build:esm": "babel src -d build/esm --config-file ./babel.config-esm.json --extensions \".ts,.tsx\" --watch",
+   "watch:build:cjs": "babel src -d build/cjs --config-file ./babel.config-cjs.json --extensions \".ts,.tsx\" --watch",
+   "watch:build:declarations": "tsc -p tsconfig.json",
+   "unwatch:build:esm": "babel src -d build/esm --config-file ./babel.config-esm.json --extensions \".ts,.tsx\"",
+   "unwatch:build:cjs": "babel src -d build/cjs --config-file ./babel.config-cjs.json --extensions \".ts,.tsx\"",
+   "unwatch:build:declarations": "tsc -p tsconfig.json",
+   "test:component:ui": "cypress open",
+   "test:component:headless": "cypress run --component",
+   "lint": "eslint .",
+   "lint:fix": "eslint . --fix",
+   "format": "prettier --write \"src/**/*.+(js|jsx|json|css|ts|tsx)\"",
+   "build": "npm-run-all -l clean -p watch:build:esm watch:build:cjs watch:build:declarations",
+   "prePublish": "npm-run-all -l clean -s lint format test:component:headless unwatch:build:esm unwatch:build:cjs unwatch:build:declarations"
+  },
+
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "styled-components": "^6.1.11"
+  },
+
+  "dependencies": {
+    "@modjs-youtube/utils": "^1.0.0"
+  },
+
+  "author": "",
+  "license": "ISC"
+}

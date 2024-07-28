@@ -1,0 +1,10 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "module": "esnext",
+        "outDir": "./build/types",
+        "target": "esnext",
+        "lib": ["dom"]
+    },
+    "include": ["./src/**/*", "cypress"],
+}
