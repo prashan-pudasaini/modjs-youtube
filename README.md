@@ -1,4 +1,4 @@
-# Frontend Web Development
+# Youtube - Frontend Web Development
 
 Youtube - Frontend Web Development
 
@@ -15,18 +15,18 @@ Youtube - Frontend Web Development
 `npm run build:icons`
 `npm run build:core`
 
-### To start core package in cypress, run:
+### To start core package in cypress, run the following scipt from the project's root dir:
 
 `npm run test:core`
 
-### To start icons package in cypress, run:
+### To start icons package in cypress, run the following script from the project's root dir:
 
 `npm run test:icons`
 
-### To start utils package in cypress, run:
+### To start utils package in cypress, run the following script from the project's root dir:
 
 `npm run test:utils`
 
-### To run test in Vitest for helper's package, run:
+### To run test in Vitest for helper's package, run the following script from the project's root dir:
 
 `npm run test:helpers`
