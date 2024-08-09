@@ -1,6 +1,6 @@
-# Complete Frontend Web Development Course
+# Frontend Web Development
 
-Youtube - Complete Frontend Web Development Course
+Youtube - Frontend Web Development
 
 ## Full Playlist on Youtube
 
@@ -10,3 +10,23 @@ Youtube - Complete Frontend Web Development Course
 
 `git clone https://github.com/fullstackpro-io/modjs-youtube.git`
 `npm install`
+`npm run build:helpers`
+`npm run build:utils`
+`npm run build:icons`
+`npm run build:core`
+
+### To start core package in cypress, run:
+
+`npm run test:core`
+
+### To start icons package in cypress, run:
+
+`npm run test:icons`
+
+### To start utils package in cypress, run:
+
+`npm run test:utils`
+
+### To run test in Vitest for helper's package, run:
+
+`npm run test:helpers`
